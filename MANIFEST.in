@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include hassanabul *.css
+recursive-include hassanabul *.csv
+recursive-include hassanabul *.html
+recursive-include hassanabul *.ico
+recursive-include hassanabul *.js
+recursive-include hassanabul *.json
+recursive-include hassanabul *.md
+recursive-include hassanabul *.png
+recursive-include hassanabul *.py
+recursive-include hassanabul *.svg
+recursive-include hassanabul *.txt
+recursive-exclude hassanabul *.pyc
