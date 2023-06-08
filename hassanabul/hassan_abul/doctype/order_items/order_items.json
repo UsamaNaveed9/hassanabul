@@ -10,7 +10,8 @@
  "field_order": [
   "naming_series",
   "get_items",
-  "amended_from"
+  "amended_from",
+  "items"
  ],
  "fields": [
   {
@@ -32,12 +33,18 @@
    "options": "Order Items",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Order Items Details"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-05-26 10:47:57.445497",
+ "modified": "2023-06-03 11:15:24.209319",
  "modified_by": "Administrator",
  "module": "Hassan Abul",
  "name": "Order Items",

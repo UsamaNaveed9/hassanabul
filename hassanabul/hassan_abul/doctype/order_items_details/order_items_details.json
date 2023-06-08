@@ -1,0 +1,197 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-06-03 11:15:10.056306",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "uom",
+  "qty_onhand",
+  "unit_cost",
+  "foreign_currency_code",
+  "current_foreign_cost_price",
+  "net_sell_price",
+  "selling_price",
+  "discount_percent",
+  "column_break_5",
+  "int_demand_and_reserved",
+  "other_demand_and_reserved",
+  "get_reserve_demand_cust_release",
+  "qty_intrans_and_on_order",
+  "net_avl_qty",
+  "days_90_sales_qty",
+  "days_180_sales_qty",
+  "one_year_sales_qty",
+  "first_rcvddate",
+  "column_break_21",
+  "last_rcvddate",
+  "part_product_family_desc",
+  "sub_part_fam",
+  "size_p",
+  "prev_list_price",
+  "est_mat_cost",
+  "part_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "UOM",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "qty_onhand",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty Onhand"
+  },
+  {
+   "fieldname": "unit_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Unit Cost"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "foreign_currency_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Foreign Currency Code"
+  },
+  {
+   "fieldname": "current_foreign_cost_price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Current Foreign Cost Price"
+  },
+  {
+   "fieldname": "net_sell_price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Net Sell Price"
+  },
+  {
+   "fieldname": "selling_price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Selling Price"
+  },
+  {
+   "fieldname": "discount_percent",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Discount Percent"
+  },
+  {
+   "fieldname": "int_demand_and_reserved",
+   "fieldtype": "Float",
+   "label": "Int Demand and Reserved"
+  },
+  {
+   "fieldname": "other_demand_and_reserved",
+   "fieldtype": "Float",
+   "label": "Other Demand and Reserved"
+  },
+  {
+   "fieldname": "get_reserve_demand_cust_release",
+   "fieldtype": "Float",
+   "label": "Get Reserve Demand Cust Release"
+  },
+  {
+   "fieldname": "qty_intrans_and_on_order",
+   "fieldtype": "Float",
+   "label": "Qty Intrans and On Order"
+  },
+  {
+   "fieldname": "net_avl_qty",
+   "fieldtype": "Float",
+   "label": "Net Avl Qty"
+  },
+  {
+   "fieldname": "days_90_sales_qty",
+   "fieldtype": "Float",
+   "label": "Days 90 Sales Qty"
+  },
+  {
+   "fieldname": "days_180_sales_qty",
+   "fieldtype": "Float",
+   "label": "Days 180 Sales Qty"
+  },
+  {
+   "fieldname": "one_year_sales_qty",
+   "fieldtype": "Float",
+   "label": "One Year Sales Qty"
+  },
+  {
+   "fieldname": "first_rcvddate",
+   "fieldtype": "Date",
+   "label": "First Rcvddate"
+  },
+  {
+   "fieldname": "last_rcvddate",
+   "fieldtype": "Date",
+   "label": "Last Rcvddate"
+  },
+  {
+   "fieldname": "part_product_family_desc",
+   "fieldtype": "Data",
+   "label": "Part Product Family Desc"
+  },
+  {
+   "fieldname": "sub_part_fam",
+   "fieldtype": "Data",
+   "label": "Sub Part Fam"
+  },
+  {
+   "fieldname": "size_p",
+   "fieldtype": "Data",
+   "label": "Size P"
+  },
+  {
+   "fieldname": "prev_list_price",
+   "fieldtype": "Currency",
+   "label": "Prev List Price"
+  },
+  {
+   "fieldname": "est_mat_cost",
+   "fieldtype": "Currency",
+   "label": "Est Mat Cost"
+  },
+  {
+   "fieldname": "part_status",
+   "fieldtype": "Select",
+   "label": "Part Status",
+   "options": "Active\nInactive"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-08 10:03:31.707269",
+ "modified_by": "Administrator",
+ "module": "Hassan Abul",
+ "name": "Order Items Details",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
