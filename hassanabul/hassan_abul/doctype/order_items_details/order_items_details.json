@@ -7,7 +7,10 @@
  "engine": "InnoDB",
  "field_order": [
   "item_code",
+  "item_name",
+  "item_group",
   "uom",
+  "processing_qty",
   "qty_onhand",
   "unit_cost",
   "foreign_currency_code",
@@ -43,6 +46,7 @@
    "options": "Item"
   },
   {
+   "fetch_from": "item_code.stock_uom",
    "fieldname": "uom",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -156,6 +160,7 @@
    "label": "Sub Part Fam"
   },
   {
+   "fetch_from": "item_code.size_p",
    "fieldname": "size_p",
    "fieldtype": "Data",
    "label": "Size P"
@@ -179,12 +184,31 @@
   {
    "fieldname": "column_break_21",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "processing_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Processing Qty"
+  },
+  {
+   "fetch_from": "item_code.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name"
+  },
+  {
+   "fetch_from": "item_code.item_group",
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "label": "Item Group",
+   "options": "Item Group"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-06-08 10:03:31.707269",
+ "modified": "2023-06-12 02:39:42.551347",
  "modified_by": "Administrator",
  "module": "Hassan Abul",
  "name": "Order Items Details",
