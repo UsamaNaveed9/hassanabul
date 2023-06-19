@@ -34,12 +34,11 @@ class OrderItems(Document):
 
 @frappe.whitelist()
 def get_all_items(supplier,item_group):
-	# items = frappe.get_all('Item', filters={'disabled': 0}, fields=['item_code', 'item_name', 'item_group', 'stock_uom', 'size_p'])
 	items = frappe.db.sql("""
         SELECT i.item_code, i.item_name, i.item_group, i.stock_uom, i.size_p
         FROM `tabItem` i
         INNER JOIN `tabItem Supplier` s ON s.parent = i.name
-        WHERE s.supplier = %s and i.disabled = 0 and i.item_group = %s
+        WHERE s.supplier = %s and i.disabled = 0 and i.has_variants = 0 and i.item_group = %s
         """, (supplier,item_group), as_dict=True)
 
 	for row in items:
