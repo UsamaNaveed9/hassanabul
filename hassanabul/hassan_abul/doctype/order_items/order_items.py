@@ -5,11 +5,11 @@ import frappe
 from frappe.model.document import Document
 
 class OrderItems(Document):
-	def before_save(self):
-		if self.items:
-			for row in self.items:
-				if(row.processing_qty==0):
-					row.processing_qty = 1
+	# def before_save(self):
+	# 	if self.items:
+	# 		for row in self.items:
+	# 			if(row.processing_qty==0):
+	# 				row.processing_qty = 1
 
 	def on_submit(self):
 		if self.items:
@@ -33,8 +33,15 @@ class OrderItems(Document):
 
 
 @frappe.whitelist()
-def get_all_items():
-	items = frappe.get_all('Item', filters={'disabled': 0}, fields=['item_code', 'item_name', 'item_group', 'stock_uom', 'size_p'])
+def get_all_items(supplier,item_group):
+	# items = frappe.get_all('Item', filters={'disabled': 0}, fields=['item_code', 'item_name', 'item_group', 'stock_uom', 'size_p'])
+	items = frappe.db.sql("""
+        SELECT i.item_code, i.item_name, i.item_group, i.stock_uom, i.size_p
+        FROM `tabItem` i
+        INNER JOIN `tabItem Supplier` s ON s.parent = i.name
+        WHERE s.supplier = %s and i.disabled = 0 and i.item_group = %s
+        """, (supplier,item_group), as_dict=True)
+
 	for row in items:
 		row['valuation_rate'] = frappe.db.get_value("Bin", {"item_code":row.item_code}, "valuation_rate")
 		row['qty_onhand'] = frappe.db.get_value("Bin", {"item_code":row.item_code}, "actual_qty")

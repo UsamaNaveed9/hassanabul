@@ -6,6 +6,10 @@ frappe.ui.form.on('Order Items', {
 		frm.clear_table("items");
 		frappe.call({
 			method: "hassanabul.hassan_abul.doctype.order_items.order_items.get_all_items",
+			args: {
+				"supplier": frm.doc.supplier,
+				"item_group": frm.doc.item_group
+			},
 			freeze: true,
 			freeze_message: "Processing",
 			callback: function(r) {
@@ -24,6 +28,6 @@ frappe.ui.form.on('Order Items', {
 						}
 					}
 			}
-		});
+		});	
 	}
 });

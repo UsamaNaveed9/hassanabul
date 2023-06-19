@@ -9,9 +9,11 @@
  "engine": "InnoDB",
  "field_order": [
   "naming_series",
+  "supplier",
   "get_items",
   "column_break_3",
   "posting_date",
+  "item_group",
   "amended_from",
   "section_break_6",
   "items"
@@ -56,6 +58,21 @@
   {
    "fieldname": "section_break_6",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Supplier",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "label": "Item Group",
+   "options": "Item Group",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -66,7 +83,7 @@
    "link_fieldname": "order_items"
   }
  ],
- "modified": "2023-06-12 02:40:54.900006",
+ "modified": "2023-06-19 13:24:49.878118",
  "modified_by": "Administrator",
  "module": "Hassan Abul",
  "name": "Order Items",
